@@ -11,16 +11,15 @@ import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
-    Random gerador = new Random();
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
 
-    public void alterarTexto(View view){
+    public void sortear(View view){
         TextView texto = findViewById(R.id.numeroSelecionado);
-            texto.setText("O numero sorteado foi: " + gerador.nextInt(10));
+        int numeroSorteado = new Random().nextInt(11);
+            texto.setText("O numero sorteado foi: " + numeroSorteado);
     }
 }
